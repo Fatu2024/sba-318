@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrationForm" action="/submit" method="post">
+            <h1>Welcome to Healthy Living!</h1>
+            <div class="input-box" id="name">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <br>
+
+            <div class="input-box" id="age">
+                <label for="age">Age</label>
+                <input type="number" name="age" placeholder="Enter your age" required>
+            </div>
+            <br>
+
+            <div class="radio">
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Other"> Other
+            </div>
+            <br>
+
+            <div class="radio">
+                <label for="program">Program</label>
+                <input type="radio" name="program" value="Basketball"> Basketball
+                <input type="radio" name="program" value="Yoga"> Yoga
+                <input type="radio" name="program" value="Other"> Other
+            </div>
+            <br>
+
+            <button class="btn" type="submit">Register</button>
+        </form>
+
+        <div id="submittedData" style="display: none;">
+            <h2>Registration Successful!</h2>
+            <p>Name: <span id="submittedName"></span></p>
+            <p>Age: <span id="submittedAge"></span></p>
+            <p>Gender: <span id="submittedGender"></span></p>
+            <p>Program: <span id="submittedProgram"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
